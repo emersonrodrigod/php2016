@@ -32,7 +32,7 @@
                                 <td><?php echo $_SESSION['alunos'][$i]['codigo']; ?></td>
                                 <td><?php echo $_SESSION['alunos'][$i]['nome']; ?></td>
                                 <td>
-                                    <a href="#" class="btn btn-primary btn-xs">
+                                    <a href="editar.php?codigo=<?php echo $i; ?>" class="btn btn-primary btn-xs">
                                         <i class="glyphicon glyphicon-pencil"></i>
                                     </a>
 
