@@ -27,20 +27,24 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <?php for ($i = 0; $i < count($_SESSION['alunos']); $i++) { ?>
-                            <td><?php echo $_SESSION['alunos'][$i]['codigo']; ?></td>
-                            <td><?php echo $_SESSION['alunos'][$i]['nome']; ?></td>
-                            <td>
-                                <a href="#" class="btn btn-primary btn-xs">
-                                    <i class="glyphicon glyphicon-pencil"></i>
-                                </a>
+                        <?php if (isset($_SESSION['alunos'])) { ?>
+                            <?php for ($i = 0; $i < count($_SESSION['alunos']); $i++) { ?>
+                                <td><?php echo $_SESSION['alunos'][$i]['codigo']; ?></td>
+                                <td><?php echo $_SESSION['alunos'][$i]['nome']; ?></td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-xs">
+                                        <i class="glyphicon glyphicon-pencil"></i>
+                                    </a>
 
-                                <a href="#" class="btn btn-danger btn-xs">
-                                    <i class="glyphicon glyphicon-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                    <?php } ?>
+                                    <a href="excluir.php?codigo=<?php echo $i; ?>" class="btn btn-danger btn-xs">
+                                        <i class="glyphicon glyphicon-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <?php
+                        }
+                    }
+                    ?>
                 </tbody>
             </table>
 
