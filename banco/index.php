@@ -33,6 +33,11 @@
                             <td><?php echo $resultado['id']; ?></td>
                             <td><?php echo $resultado['nome']; ?></td>
                             <td><?php echo $resultado['preco']; ?></td>
+                            <td>
+                                <a class="btn btn-danger btn-xs" href="excluir.php?id=<?php echo $resultado['id']; ?>">
+                                    <i class="glyphicon glyphicon-trash"></i>
+                                </a>
+                            </td>
                         </tr>
                     <?php } ?>
                 </tbody>
