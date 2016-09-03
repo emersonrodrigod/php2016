@@ -37,6 +37,10 @@
                                 <a class="btn btn-danger btn-xs" href="excluir.php?id=<?php echo $resultado['id']; ?>">
                                     <i class="glyphicon glyphicon-trash"></i>
                                 </a>
+                                
+                                <a class="btn btn-primary btn-xs" href="alterar.php?id=<?php echo $resultado['id']; ?>">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </a>
                             </td>
                         </tr>
                     <?php } ?>
