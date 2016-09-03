@@ -8,6 +8,9 @@
     </head>
     <body>
         <div class="container">
+            
+            <a href="incluir.html" class="btn btn-primary">Novo Produto</a>
+            
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
