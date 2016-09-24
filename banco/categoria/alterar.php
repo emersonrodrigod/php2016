@@ -3,7 +3,7 @@
  
  $id = $_GET['id'];
  
- $sql = "select * from produtos where id = $id";
+ $sql = "select * from categoria where id = $id";
  $query = $conexao->query($sql);
 
  $resultado = $query->fetch_array();
@@ -30,11 +30,6 @@
                 <div class="form-group">
                     <label class="control-label">Nome</label>
                     <input type="text" class="form-control" name="nome" value="<?php echo $resultado['nome'];?>">
-                </div>
-                
-                <div class="form-group">
-                    <label class="control-label">Preço</label>
-                    <input type="text" class="form-control" name="preco" value="<?php echo $resultado['preco'];?>">
                 </div>
                 
                 <div class="form-group">

@@ -4,7 +4,7 @@ $conexao = new mysqli('localhost', 'root', '', 'emerson');
 
 $id = $_GET['id'];
 
-$sql = "delete from produtos where id = $id";
+$sql = "delete from categoria where id = $id";
 
 $query = $conexao->query($sql);
 

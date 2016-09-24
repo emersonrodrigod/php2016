@@ -5,11 +5,10 @@ $conexao = new mysqli('localhost', 'root', '', 'emerson');
 
 //recupera as variaveis digitadas pelo usuario
 $nome = $_POST['nome'];
-$preco = $_POST['preco'];
 $id = $_POST['id'];
 
 //define o comando sql para inserir no banco
-$sql = "update produtos set nome = '$nome', preco = $preco where id = $id";
+$sql = "update categoria set nome = '$nome' where id = $id";
 
 //executa a inserção
 $query = $conexao->query($sql);

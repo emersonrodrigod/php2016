@@ -9,20 +9,19 @@
     <body>
         <div class="container">
             
-            <a href="incluir.html" class="btn btn-primary">Novo Produto</a>
+            <a href="incluir.html" class="btn btn-primary">Nova Categoria</a>
             
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
                         <th>Codigo</th>
                         <th>Nome</th>
-                        <th>Preço</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                     $conexao = new mysqli('localhost', 'root', '', 'emerson');
-                    $sql = "select * from produtos";
+                    $sql = "select * from categoria";
 
                     $query = $conexao->query($sql);
 
@@ -32,7 +31,6 @@
                         <tr>
                             <td><?php echo $resultado['id']; ?></td>
                             <td><?php echo $resultado['nome']; ?></td>
-                            <td><?php echo $resultado['preco']; ?></td>
                             <td>
                                 <a class="btn btn-danger btn-xs" href="excluir.php?id=<?php echo $resultado['id']; ?>">
                                     <i class="glyphicon glyphicon-trash"></i>
